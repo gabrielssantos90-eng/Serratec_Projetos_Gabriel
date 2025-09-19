@@ -5,32 +5,34 @@ programa
 	funcao inicio()
 	{
 		inteiro sequencia
+		cadeia continuar = "s"
 
-		faca
+		enquanto(continuar == "s" ou continuar == "S")
 		{
-          
-		
-		escreva("Escreva um número : ")
-		leia(sequencia)
+			faca
+			{
+				escreva("Escreva um número entre 0 e 10 para ver sua tabuada: ")
+				leia(sequencia)
 				
-	   
+				se(nao (sequencia >= 0 e sequencia <=10))
+				{
+					escreva("Número inválido! Digite um número entre 0 e 10.\n")
+				}
+			}
+			enquanto(nao (sequencia >= 0 e sequencia <=10))
+			
+			escreva("\n--- Tabuada do ", sequencia, " ---\n")
+			
+			para(inteiro numero = 1; numero <=10; numero = numero + 1)
+			{
+				escreva(sequencia, " x ", numero, " = ", (sequencia * numero), "\n")
+			}
+			
+			escreva("\nDeseja calcular outra tabuada? (s/n): ")
+			leia(continuar)
 		}
 		
-		enquanto(nao (sequencia >= 0 e sequencia <=10))
-		
-		
-		
-
-		
-			
-
-		para(inteiro numero = 1; numero <=10; numero = numero + 1)
-		{
-			
-			escreva(numero, "\n")
-		}
-		
-		
+		escreva("Programa finalizado. Obrigado!")
 	}
 }
 /* $$$ Portugol Studio $$$ 
